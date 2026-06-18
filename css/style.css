@@ -1,0 +1,144 @@
+ /* Базовые стили для выравнивания карточки по центру экрана */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #222222;
+        }
+
+        /* Стили для карточки регистрации */
+        .form-container {
+            background-color: white;
+            padding: 40px;
+            width: 100%;
+            max-width: 500px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(246, 245, 245, 0.1);
+        }
+
+        /* Стили для заголовка login / registration */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            align-items: center;    
+            font-size: 24px;
+            font-weight: 600;    
+            margin-bottom: 10px;
+        }
+
+        .tab {
+            color: #333;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        .tab-separator {
+            color: #999;
+            font-weight: 300;
+        }
+        .tab.active {
+            color: #1ea83a;
+        }
+
+        /* Стили для кнопки регистрации */
+        button {
+            width: 340px;
+            height: 44px;
+            padding: 6px 10px;
+            background-color: #1ea83a;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            box-sizing: border-box;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        /* Стили для разделителя текста */
+        .separator-text {
+            display: flex; 
+            align-items: center;
+            text-align: center;
+            margin: 30px 0;
+            color: #343434;
+            font-size: 14px;
+        }
+
+        .separator-text::before, 
+        .separator-text::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #dbdada;
+        }
+
+        .separator-text::before {
+            margin-right: 10px;
+        }
+
+        .separator-text::after {
+            margin-left: 10px;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Кнопки соцсетей */
+        .btn-social {
+            width: 100%;
+            padding: 6px;
+            margin-bottom: 6px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #555;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        /* Стили для иконок соцсетей внутри кнопок */
+        .social-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Текст-описание */
+        .subtitle {
+            color: #4a4a4a;
+            font-size: 14px;
+            margin-bottom: 10px;
+            margin-top: 30px;
+            text-align: left;
+        }
+        /* Единые стили для всех полей ввода */
+input {
+    width: 100%;
+    padding: 16px 14px; /* 16px сверху/снизу, 15px по бокам */
+    margin-bottom: 20px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #333;
+}
+/* Дополнительно: стиль для текста-подсказки (placeholder), чтобы он был светло-серым */
+input::placeholder {
+    color: #999;
+}

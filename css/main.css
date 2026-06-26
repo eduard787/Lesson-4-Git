@@ -1,0 +1,130 @@
+/* Общие стили для всей страницы */
+body {
+    font-family: sans-serif;
+    color: #333333;
+}
+
+/* Центрируем весь сайт по контенту макета */
+.container {
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 15px 120px;
+
+    /* Выстраиваем в ряд логотип, меню и кнопку */
+    header .logo,
+    header nav,
+    header .btn-login {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    /* Выравниваем иконку и текст внутри самого логотипа */
+    header .logo img {
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+
+    header nav {
+        margin-left: 200px;
+    }
+
+    header nav a {
+        margin-right: 40px;
+        text-decoration: none;
+        color: #3D3D3D;
+        font-weight: 500;
+    }
+
+    /* Стили для активной ссылки (Home) с зеленой полоской */
+    header nav a.active {
+        font-weight: bold;
+        border-bottom: 3px solid #46A358;
+        padding-bottom: 25px;
+    }
+
+    header nav a:last-child {
+        margin-right: 0;
+    }
+
+    header .btn-login {
+        margin-left: 270px;
+        text-decoration: none;
+        color: #FFFFFF;
+        background-color: #46A358;
+        padding: 8px 16px;
+        border-radius: 6px;
+        font-weight: bold;
+    }
+
+    /* --- ГЛАВНЫЙ БАННЕР --- */
+
+    /* Добавляем серый фон для всего баннера */
+    .inline-block-container {
+        background-color: #fafafa;
+        padding: 40px;
+        margin-top: 20px;
+        border-radius: 10px;
+    }
+
+    /* Левая часть с текстом */
+    .banner-text {
+        display: inline-block;
+        vertical-align: top;
+        width: 55%;
+        margin-top: 40px;
+    }
+
+    /* Правая часть с картинкой */
+    .banner-image {
+        display: inline-block;
+        vertical-align: top;
+        width: 40%;
+    }
+
+    /* Картинка внутри правого блока*/
+    .banner-image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .btn-primary {
+        display: inline-block;
+        background-color: #46A358;
+        color: white;
+        text-decoration: none;
+        padding: 10px 25px;
+        border-radius: 6px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: 30px;
+    }
+
+    /* Стили для огромного заголовка */
+    .banner-text h1 {
+        font-size: 55px;
+        font-weight: 900;
+        line-height: 70px;
+        margin: 5px 0;
+        color: #3D3D3D;
+        text-transform: uppercase;
+        max-width: 650px;
+    }
+
+    /* Стили для серого абзаца */
+    .banner-text p {
+        color: #727272;
+        font-size: 12px;
+        line-height: 1.5;
+        margin: 5px 0 20px 0;
+    }
+
+    /* Стили для маленького приветствия */
+    .subtitle {
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    .text-green {
+        color: #46A358;
+    }

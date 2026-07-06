@@ -1,5 +1,5 @@
 /*1. ОБЩИЕ СТИЛИ И СЕТКА ПЛАТФОРМЫ*/
-   @font-face {
+@font-face {
     font-family: 'Cera Pro';
     src: url('fonts/CeraPro-Thin.woff') format('woff');
     font-weight: 100;
@@ -35,7 +35,7 @@ body {
     padding: 15px 120px;
 }
 
-/*2. ШАПКА САЙТА (HEADER) */
+/*2. ШАПКА САЙТА*/
 header {
     display: flex;
     justify-content: space-between; 
@@ -74,25 +74,25 @@ header .btn-login {
     font-weight: bold;
 }
 
-/*3. ГЛАВНЫЙ БАННЕР */
-.inline-block-container {
+/*3. ГЛАВНЫЙ БАННЕР*/
+.banner-container {
     background-color: #fafafa;
     padding: 40px;
     margin-top: 20px;
     border-radius: 10px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
 }
 
 .banner-text {
-    display: inline-block;
-    vertical-align: top;
     width: 55%;
-    margin-top: 40px;
 }
 
 .banner-image {
-    display: inline-block;
-    vertical-align: top;
     width: 40%;
+    display: flex; 
+    justify-content: center;
 }
 
 .banner-image img {
@@ -101,7 +101,9 @@ header .btn-login {
 }
 
 .btn-primary {
-    display: inline-block;
+    display: inline-flex; 
+    justify-content: center;
+    align-items: center;
     background-color: #46A358;
     color: white;
     text-decoration: none;
@@ -110,6 +112,11 @@ header .btn-login {
     font-weight: bold;
     text-transform: uppercase;
     margin-top: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #3b8a4a; 
 }
 
 .banner-text h1 {
@@ -124,7 +131,7 @@ header .btn-login {
 
 .banner-text p {
     color: #727272;
-    font-size: 12px;
+    font-size: 14px; 
     line-height: 1.5;
     margin: 5px 0 20px 0;
 }
@@ -139,14 +146,13 @@ header .btn-login {
     color: #46A358;
 }
 
-/*4. СЕКЦИЯ КАТАЛОГА*/
+/*4. СЕКЦИЯ КАТАЛОГА И САЙДБАР*/
 .shop-section {
     display: flex;
     gap: 40px;
     margin-top: 80px;
 }
 
-/* ЛЕВАЯ ПАНЕЛЬ (САЙДБАР) */
 .sidebar {
     width: 260px;
     min-width: 260px; 
@@ -192,8 +198,9 @@ header .btn-login {
 }
 
 .sale-banner {
-    width: 280px;
-    margin-top: 350px;
+    width: 100%; 
+    margin-top: 250px; 
+    padding: 0 20px;
     box-sizing: border-box;
 }
 
@@ -266,6 +273,16 @@ header .btn-login {
     align-items: center; 
     padding: 20px;
     border-radius: 6px;
+    border-top: 2px solid transparent;
+    position: relative; 
+    overflow: hidden; 
+    transition: all 0.3s ease;
+}
+
+.product-card:hover .product-image {
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    border-top-color: #46A358;
 }
 
 .product-image img {
@@ -275,20 +292,79 @@ header .btn-login {
     mix-blend-mode: multiply;
 }
 
-.product-card h1 {
+.product-card h3 {
     font-size: 16px;
     margin: 15px 0 5px 0;
     color: #3D3D3D;
     font-weight: normal;
 }
 
-.product-card .price {
+.price-block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.price {
     color: #46A358;
     font-weight: bold;
     font-size: 18px;
 }
 
-/*6. ПАГИНАЦИЯ (НОМЕРА СТРАНИЦ)*/
+.old-price {
+    color: #A5A5A5;
+    text-decoration: line-through;
+    font-size: 15px;
+}
+
+
+/* Бейдж скидки*/
+.discount-badge {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    background-color: #46A358;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+/* Контейнер для иконок*/
+.action-icons {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%); 
+    display: flex;
+    gap: 10px;
+    opacity: 0; 
+    transition: all 0.3s ease; 
+}
+
+/* Квадратики с иконками */
+.icon-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.icon-btn:hover {
+    background-color: #F1F1F1;
+}
+
+.product-card:hover .action-icons {
+    opacity: 1; 
+    bottom: 30px; 
+}
+
+/*6. ПАГИНАЦИЯ*/
 .pagination {
     display: flex;
     justify-content: flex-end;

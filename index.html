@@ -11,17 +11,43 @@
 
 <body>
     <div class="container">
-
-        <header>
+        <div class="top-animation-box">
+           <video src="./images/animation.mp4" autoplay loop muted playsinline class="animated-video"></video>
+        </div>
+        <header class="header">
             <div class="logo">
                 <img src="./images/Logo.svg" alt="Logo" width="150" height="34">
             </div>
 
-            <nav>
-                <a href="#" class="active">Home</a>
-                <a href="#">Shop</a>
-                <a href="#">Plant Care</a>
-                <a href="#">Blogs</a>
+            <nav class="main-nav">
+                <ul class="menu-list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li class="has-dropdown">
+
+                        <a href="#">Plant Care</a>
+                        <ul class="dropdown-level-1">
+
+                            <li><a href="#">Drainage</a></li>
+                            <li><a href="#">Fungicides</a></li>
+                            <li><a href="#">Fertilizer</a></li>
+                            <li class="has-sub-dropdown">
+                                <a href="#">Priming <span class="arrow">›</span></a>
+
+                                <ul class="dropdown-level-2">
+                                    <li><a href="#">Universal</a></li>
+                                    <li><a href="#">For Ficus</a></li>
+                                    <li><a href="#">For Cacti</a></li>
+                                    <li><a href="#">For Citrus</a></li>
+                                    <li><a href="#">For those in bloom</a></li>
+                                    <li><a href="#">For Orchids</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">Blogs</a></li>
+                </ul>
             </nav>
             <a href="#" class="btn-login">
                 <img src="./images/Logout.svg" alt="Icon">

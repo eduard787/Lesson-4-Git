@@ -86,7 +86,9 @@ body {
 .dropdown-level-1 {
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 100px;
     background-color: #f3f8f4;
     width: 220px;
     padding: 10px 0;

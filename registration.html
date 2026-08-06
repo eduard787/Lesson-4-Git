@@ -10,6 +10,9 @@
 </head>
 
 <body>
+    <div id="preloader" class="preloader">
+        <div class="spinner"></div>
+    </div>
     <form class="form-container">
         <div class="form-container">
             <div class="tabs">
@@ -22,6 +25,14 @@
             <input type="email" placeholder="Email" required>
             <input type="password" placeholder="Password" required>
             <input type="password" placeholder="Confirm Password" required>
+
+            <div class="policy-group">
+                <input type="checkbox" id="policy" required>
+                <label for="policy">
+                    I have read and agree to the <a href="#">privacy policy</a> and <a href="#">terms of service</a>.
+                </label>
+            </div>
+
             <button type="submit">Register</button>
             <div class="separator-text">Or register with</div>
             <button class="btn-social">
@@ -34,7 +45,12 @@
             </button>
         </div>
     </form>
-
+<script>
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            preloader.classList.add('hidden');
+        });
+    </script>
 </body>
 
 </html>
